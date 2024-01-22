@@ -97,7 +97,6 @@ files.fonts = `${folders.fontsDev}/**/*`;
 files.webfonts = `${folders.webfontsDev}/**/*`;
 
 // Development Tasks
-
 // Sass Task:
 // 1. Compiles the Sass files into the dev styles folder
 function sassTask() {
