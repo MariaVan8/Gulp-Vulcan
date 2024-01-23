@@ -7,7 +7,7 @@
     background-position: center;
     transition: opacity 1s ease-in-out;
     width: 100%;
-    height: 60rem;
+    // height: 60rem;
 
     &-top{
         display: none;
@@ -102,6 +102,7 @@
             margin: 0;
             font-size: 3rem;
             flex: 0 0 auto;
+            padding: 0 3rem;
         }
 
         button {
@@ -149,7 +150,7 @@
 
     @media screen and (min-width: 768px) {
         position: relative;
-        height: 75vh;
+        // height: 75vh;
 
         &-top{
             @include flex-row;
@@ -184,6 +185,7 @@
 
         &-banner{
             padding: 1rem 8rem ;
+            margin: 5rem 0;
         }
 
         svg {
