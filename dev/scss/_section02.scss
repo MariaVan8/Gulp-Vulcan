@@ -1,0 +1,101 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.section {
+    &-02 {
+        @include flex-col;
+        width: 100%;
+        margin: 0 auto;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        height: 700px;
+        gap: 5vh;
+        justify-content: center;
+        background: url("/../images/bg-section-about-us.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom;
+
+        button {
+            color: $white;
+            border: 1px solid $white;
+            background: none;
+            text-transform: uppercase;
+            width: 150px;
+            height: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+    }
+
+    &-copy-02 {
+        @include flex-col;
+        width: 100%;
+        margin: 0 auto;
+        align-items: center;
+        text-align: center;
+
+        h2 {
+            text-transform: uppercase;
+            color: $white;
+            font-size: 2.1rem;
+        }
+
+        p {
+            color: $white;
+            font-size: 1rem;
+            width: 80%;
+        }
+    }
+
+    @media (min-width: 768px) {}
+
+    @media (min-width: 960px) {
+        &-02 {
+            @include flex-col;
+            width: 100%;
+            margin: 0 auto;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+            height: 525px;
+            gap: 5vh;
+            justify-content: center;
+            background: url("/../images/bg-section-about-us.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: bottom;
+
+            button {
+                color: $white;
+                border: 1px solid $white;
+                background: none;
+                text-transform: uppercase;
+                width: 200px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+        }
+
+        &-copy {
+            @include flex-col;
+            width: 75%;
+
+            h2 {
+                text-transform: uppercase;
+                color: $white;
+                font-size: 2.8rem;
+            }
+
+            p {
+                color: $white;
+                font-size: 0.7rem;
+                width: 85%;
+            }
+        }
+    }
+
+    @media (min-width: 1024px) {}
+
+}
