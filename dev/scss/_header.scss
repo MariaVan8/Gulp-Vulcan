@@ -85,11 +85,11 @@
     &-banner {
         text-transform: uppercase;
         color: $white;
-        font-size: 2.5rem;
+        font-size: 1.5rem;
         @include flex-col;
         justify-content: center;
         align-items: center;
-        height: 90%;
+        height: 75%;
         width: 100%;
         text-align: center;
 
@@ -100,7 +100,7 @@
         }
 
         button {
-            margin-top: 1rem;
+            margin-top: 2rem;
             padding: 1rem;
             border: 1px solid $white;
             background-color: transparent;
@@ -108,7 +108,34 @@
             color: $white;
             text-transform: uppercase;
         }
+
+        & > :nth-child(3) {
+            margin-top: 5rem; 
+        }
+        
+        .circles{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 3rem;
+
+            .circle {
+                width: 15px;
+                height: 15px;
+                background-color: $white;
+                border-radius: 50%;
+                margin: 0 5px;
+
+                &.active {
+                    background-color: $blue;
+                }
     }
+        }
+    }
+
+
+
+
 
     @media screen and (min-width: 768px) {
         position: relative;
