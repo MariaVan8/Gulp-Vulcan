@@ -21,6 +21,8 @@ document.addEventListener('DOMContentLoaded', function() {
       headerElement.style.backgroundImage = 'url(' + images[currentImageIndex] + ')';
       currentImageIndex = (currentImageIndex + 1) % images.length;
     }
+
+    changeBackgroundImage();
   
     setInterval(changeBackgroundImage, 3000); 
   });
