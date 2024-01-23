@@ -1,0 +1,29 @@
+@charset "utf-8";
+@use "mixins" as *;
+
+/* CSS Reset */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    @include flex-col;
+    margin: 0 auto;
+    // justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+main {
+    @include flex-col;
+    width: 100%;
+    // max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
