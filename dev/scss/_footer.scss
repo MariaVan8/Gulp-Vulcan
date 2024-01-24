@@ -2,13 +2,18 @@
 @use 'mixins' as *;
 
 .footer{
-    background-color: $blue;
+    background-color: #009DDC;
     width: 100%;
     text-align: center;
     @include flex-col;
     justify-content: center;
     align-items: center;
 
+    &-wave{
+        width: 100%;
+        height: auto;
+        bottom: 0;
+    }
     p{
         color: $white;
         font-size: 1rem;
@@ -19,7 +24,7 @@
     &-top{
         @include flex-row;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         gap: 1rem;
         width: 100%;
         padding: 1rem;
@@ -54,5 +59,31 @@
             font-size: 0.8rem;
         }
     }
+
+    @media screen and (min-width: 768px){
+    @include flex-row;
+    padding: 2rem;
+
+    p{
+        font-size: 0.7rem;
+        margin: 0;
+    }
+
+    &-logo{
+        width: 18%;
+    }
+    &-top{
+        width: 100%;
+    }
+
+    &-bottom{
+        width: 100%;
+    }
+
+    &-right{
+        gap: 0.5rem;
+       
+    }
     
+}
 }
