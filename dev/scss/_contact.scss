@@ -1,0 +1,140 @@
+@use "variables" as *;
+@use "mixins" as *; 
+.contact{
+    
+    background-color: $dark-blue;
+    color: $white;
+    @include flex-col;
+    justify-content: space-around;
+    align-items: center;    
+    text-align: center;
+
+    &-map{
+    @include flex-col;
+    width: 100%;
+    height: 100%;
+    padding: 30% 0;
+    background: url("./../images/map.jpg");
+    background-size: 160%;
+    background-repeat: no-repeat;
+    background-position-x: -116px;
+    // padding-top: 130px;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    /* margin-top: 2rem;*/
+    &-objects{
+
+        h2{
+            font-size: 2.1rem;
+            text-transform: uppercase;
+            margin-bottom: 0;
+            margin-top: 0;
+            color: $dark-grey;
+        }
+    
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // // margin-top: 2rem;
+        button{
+            color: $dark-grey;
+            border: 1px solid $dark-grey;
+            background: none;
+            text-transform: uppercase;
+            margin-top: 10px;
+            // width: 100%;
+            height: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+    }
+}
+}
+
+    &-question{
+        @include flex-col;
+        height: 100%;  
+        padding-top: 15%;
+        h2{
+        font-size: 2.1rem;
+        width: 300px;
+        text-transform: uppercase;
+        margin-bottom: .5rem;
+        margin-top: 0;
+    }
+
+    &-button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+        padding-bottom: 100px;
+        button{
+            color: $white;
+            border: 1px solid $white;
+            background: none;
+            text-transform: uppercase;
+            width: 150px;
+            height: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+    }
+   
+    }
+    @media screen and (min-width: 768px) {
+        flex-direction: row-reverse;
+        height: 400px;
+
+       
+        
+        &-map{
+            width: 50%;
+            height: 100%;
+            background-size: cover;
+            background-position: top left; 
+            justify-content: center;
+            padding:  0;
+
+            &-objects{
+                margin-top: 0;
+
+            }
+
+            &-button{
+                margin-top: 2rem;
+                button{
+                    color: $white;
+                    border: none;
+                    background: $blue;
+                }
+            }   
+        }
+
+        &-question{
+            @include flex-col;
+            height: 100%;
+            width: 50%;
+            padding:  0;
+            justify-content: center;
+            align-items: center;
+
+            h2{
+                width: 100%;
+            }
+            &-button{
+                margin-top: 2rem;
+                padding: 0;
+                button{
+                        color: $white;
+                        border: none;
+                        background: $blue;
+                    }
+            }
+        }
+    
+
+
+
+    }
+}
