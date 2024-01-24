@@ -1,0 +1,27 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+
+ .video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 10%;
+    background-color: #468ECC;
+
+
+  &-iframe {
+    background-color: #468ECC;
+    border: 10px solid #234058;
+    height: 198px;
+    // display: flex;
+    // justify-content: center;
+    //  height: 100%;
+    // width: 100%;
+    //padding: 3rem 7rem;    // position: absolute;
+    // top: 0;
+    // left: 0;
+  }
+}
