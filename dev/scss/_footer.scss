@@ -10,7 +10,6 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    // padding-bottom: 10vw;
 
     &-wave{
         display: block;
@@ -43,7 +42,7 @@
         z-index: 2;
     }
     &-logo{
-        width: 25%;
+        width: 35%;
         text-align: center;
     }
 
@@ -51,8 +50,8 @@
         @include flex-row;
         gap: 1rem;
         img{
-            width: 2rem;
-            height: 2rem;
+            width: 1.5rem;
+            height: 1.5rem;
             text-align: center;
         }
     }
@@ -74,27 +73,33 @@
     }
 
     @media screen and (min-width: 768px){
-    @include flex-col;
+    @include flex-row;
+    justify-content: space-around;
     bottom: 0rem;
+    align-items: center;
     flex-wrap: nowrap;
+    padding-bottom: 2rem;
     &-wave{
         bottom: 0;   
     }
 
      p{
-        font-size: 0.7rem;
+        font-size: 0.9rem;
         margin: 0;
     }
 
     &-logo{
-        width: 18%;
-    }
-    &-top{
-        // width: 100%;
-        display: inline-flex; // Keeps them inline and part of the flex layout
-        align-items: center;
+        width: 100%;
+        &_wrapper{
+        width: 25%;
+        display: flex;
+        }
     }
 
+    &-info_wrapper{
+        @include flex-col;
+        padding-right: 4rem;
+    }
     &-bottom{
         width: 100%;
     }
