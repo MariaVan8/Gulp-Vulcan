@@ -5,14 +5,20 @@
     background-color: #009DDC;
     width: 100%;
     text-align: center;
-    @include flex-col;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 
     &-wave{
+        display: block;
         width: 100%;
         height: auto;
-        bottom: 0;
+        position: absolute;
+        bottom: 0; 
+        left: 0;
+        z-index: 1; 
     }
     p{
         color: $white;
@@ -28,9 +34,15 @@
         gap: 1rem;
         width: 100%;
         padding: 1rem;
+        position: relative;
+        z-index: 2; 
+    }
+    &-bottom{
+        position: relative;
+        z-index: 2;
     }
     &-logo{
-        width: 25%;
+        width: 35%;
         text-align: center;
     }
 
@@ -38,8 +50,8 @@
         @include flex-row;
         gap: 1rem;
         img{
-            width: 2rem;
-            height: 2rem;
+            width: 1.5rem;
+            height: 1.5rem;
             text-align: center;
         }
     }
@@ -62,20 +74,32 @@
 
     @media screen and (min-width: 768px){
     @include flex-row;
-    padding: 2rem;
+    justify-content: space-around;
+    bottom: 0rem;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding-bottom: 2rem;
+    &-wave{
+        bottom: 0;   
+    }
 
-    p{
-        font-size: 0.7rem;
+     p{
+        font-size: 0.9rem;
         margin: 0;
     }
 
     &-logo{
-        width: 18%;
-    }
-    &-top{
         width: 100%;
+        &_wrapper{
+        width: 25%;
+        display: flex;
+        }
     }
 
+    &-info_wrapper{
+        @include flex-col;
+        padding-right: 4rem;
+    }
     &-bottom{
         width: 100%;
     }
@@ -85,5 +109,44 @@
        
     }
     
+    
+}
+@media (min-width: 960px){
+    justify-content: space-around;
+   &-wave{
+        bottom: 0;   
+    }
+    p{
+        font-size: 0.6rem;
+    }
+
+    &-logo{
+        width: 60%;
+        &_wrapper{
+            display: flex;
+            justify-content: center;
+        width: 25%;
+        }
+    }
+    &-info_wrapper{
+        @include flex-row;
+        justify-content: space-between;
+        padding-right: 0;
+        align-items: center;
+        width: 48%;
+    }
+    &-top{
+        width: 70%;
+        justify-content: space-between;
+    }
+    &-right{
+        width: 72%;
+        justify-content: end;
+        
+    }
+    &-bottom{
+        width: 45%;
+        padding: 1rem 0rem;
+    }
 }
 }
