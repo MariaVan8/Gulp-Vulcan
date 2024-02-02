@@ -112,8 +112,41 @@
     
 }
 @media (min-width: 960px){
+    justify-content: space-around;
    &-wave{
         bottom: 0;   
+    }
+    p{
+        font-size: 0.6rem;
+    }
+
+    &-logo{
+        width: 60%;
+        &_wrapper{
+            display: flex;
+            justify-content: center;
+        width: 25%;
+        }
+    }
+    &-info_wrapper{
+        @include flex-row;
+        justify-content: space-between;
+        padding-right: 0;
+        align-items: center;
+        width: 48%;
+    }
+    &-top{
+        width: 70%;
+        justify-content: space-between;
+    }
+    &-right{
+        width: 72%;
+        justify-content: end;
+        
+    }
+    &-bottom{
+        width: 45%;
+        padding: 1rem 0rem;
     }
 }
 }
