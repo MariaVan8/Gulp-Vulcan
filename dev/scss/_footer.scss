@@ -5,14 +5,21 @@
     background-color: #009DDC;
     width: 100%;
     text-align: center;
-    @include flex-col;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    // padding-bottom: 10vw;
 
     &-wave{
+        display: block;
         width: 100%;
         height: auto;
-        bottom: 0;
+        position: absolute;
+        bottom: 0; 
+        left: 0;
+        z-index: 1; 
     }
     p{
         color: $white;
@@ -28,6 +35,12 @@
         gap: 1rem;
         width: 100%;
         padding: 1rem;
+        position: relative;
+        z-index: 2; 
+    }
+    &-bottom{
+        position: relative;
+        z-index: 2;
     }
     &-logo{
         width: 25%;
@@ -61,10 +74,14 @@
     }
 
     @media screen and (min-width: 768px){
-    @include flex-row;
-    padding: 2rem;
+    @include flex-col;
+    bottom: 0rem;
+    flex-wrap: nowrap;
+    &-wave{
+        bottom: 0;   
+    }
 
-    p{
+     p{
         font-size: 0.7rem;
         margin: 0;
     }
@@ -73,7 +90,9 @@
         width: 18%;
     }
     &-top{
-        width: 100%;
+        // width: 100%;
+        display: inline-flex; // Keeps them inline and part of the flex layout
+        align-items: center;
     }
 
     &-bottom{
@@ -85,5 +104,11 @@
        
     }
     
+    
+}
+@media (min-width: 960px){
+   &-wave{
+        bottom: 0;   
+    }
 }
 }
