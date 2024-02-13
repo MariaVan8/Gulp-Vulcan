@@ -1,7 +1,7 @@
 @use 'variables' as *;
 @use 'mixins' as *;
 
-.footer{
+.footer {
     background-color: #009DDC;
     width: 100%;
     text-align: center;
@@ -11,23 +11,25 @@
     align-items: center;
     position: relative;
 
-    &-wave{
+    &-wave {
         display: block;
         width: 100%;
         height: auto;
         position: absolute;
-        bottom: 0; 
+        bottom: 0;
         left: 0;
-        z-index: 1; 
+        z-index: 1;
     }
-    p{
+
+    p {
         color: $white;
         font-size: 1rem;
         margin: 1rem;
         font-weight: 500;
         text-transform: uppercase;
     }
-    &-top{
+
+    &-top {
         @include flex-row;
         align-items: center;
         justify-content: center;
@@ -35,118 +37,132 @@
         width: 100%;
         padding: 1rem;
         position: relative;
-        z-index: 2; 
+        z-index: 2;
     }
-    &-bottom{
+
+    &-bottom {
         position: relative;
         z-index: 2;
     }
-    &-logo{
+
+    &-logo {
         width: 35%;
         text-align: center;
     }
 
-    &-left{
+    &-left {
         @include flex-row;
         gap: 1rem;
-        img{
+
+        img {
             width: 1.5rem;
             height: 1.5rem;
             text-align: center;
         }
     }
 
-    &-right{
+    &-right {
         @include flex-row;
         align-items: center;
-       
-        img{
-            width: 1.5rem;
-            height: 1.5rem;
+
+        img {
+            width: 1rem;
+            // height: 1rem;
             text-align: center;
         }
 
-        p{
+        p {
             color: $white;
             font-size: 0.8rem;
         }
     }
 
-    @media screen and (min-width: 768px){
-    @include flex-row;
-    justify-content: space-around;
-    bottom: 0rem;
-    align-items: center;
-    flex-wrap: nowrap;
-    padding-bottom: 2rem;
-    &-wave{
-        bottom: 0;   
-    }
-
-     p{
-        font-size: 0.9rem;
-        margin: 0;
-    }
-
-    &-logo{
-        width: 80%;
-        &_wrapper{
-        width: 25%;
-        display: flex;
-        }
-    }
-
-    &-info_wrapper{
-        @include flex-col;
-        padding-right: 4rem;
-    }
-    &-bottom{
-        width: 100%;
-    }
-
-    &-right{
-        gap: 0.5rem;
-       
-    }
-    
-    
-}
-@media (min-width: 960px){
-    justify-content: space-around;
-   &-wave{
-        bottom: 0;   
-    }
-    p{
-        font-size: 0.6rem;
-    }
-
-    &-logo{
-        width: 60%;
-        &_wrapper{
-            display: flex;
-            justify-content: center;
-        width: 25%;
-        }
-    }
-    &-info_wrapper{
+    @media screen and (min-width: 768px) {
         @include flex-row;
-        justify-content: space-between;
-        padding-right: 0;
+        justify-content: space-around;
+        bottom: 0rem;
         align-items: center;
-        width: 48%;
+        flex-wrap: nowrap;
+        padding-bottom: 2rem;
+
+        &-wave {
+            bottom: 0;
+        }
+
+        p {
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        &-logo {
+            width: 80%;
+
+            &_wrapper {
+                width: 25%;
+                display: flex;
+            }
+        }
+
+        &-info_wrapper {
+            @include flex-col;
+            padding-right: 4rem;
+        }
+
+        &-bottom {
+            width: 100%;
+        }
+
+        &-right {
+            gap: 0.5rem;
+
+        }
+
+
     }
-    &-top{
-        width: 70%;
-        justify-content: space-between;
+
+    @media (min-width: 960px) {
+        justify-content: space-around;
+
+        &-wave {
+            bottom: 0;
+        }
+
+        p {
+            font-size: 0.6rem;
+        }
+
+        &-logo {
+            width: 60%;
+
+            &_wrapper {
+                display: flex;
+                justify-content: center;
+                width: 25%;
+            }
+        }
+
+        &-info_wrapper {
+            @include flex-row;
+            justify-content: space-between;
+            padding-right: 0;
+            align-items: center;
+            width: 48%;
+        }
+
+        &-top {
+            width: 70%;
+            justify-content: space-between;
+        }
+
+        &-right {
+            width: 72%;
+            justify-content: end;
+
+        }
+
+        &-bottom {
+            width: 45%;
+            padding: 1rem 0rem;
+        }
     }
-    &-right{
-        width: 72%;
-        justify-content: end;
-        
-    }
-    &-bottom{
-        width: 45%;
-        padding: 1rem 0rem;
-    }
-}
 }
