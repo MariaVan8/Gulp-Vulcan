@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Put Web Page Title Here...</title>
+	<title>Vulcan | Gulp Project</title>
 
 	<!-- *** IMPORTANT *** PUT LINKS TO GOOGLE FONTS HERE -->
 	<!-- Put Google Fonts Here -->
@@ -27,21 +27,31 @@
 				<p>Product Literature</p>
 			</div>
 			<div class="header-right">
-				<img src="./images/phone-call.png" alt="phone" >
+				<img src="./images/phone-call-wht.png" alt="phone">
 				<p>+1 712-642-2755</p>
-				<img src="./images/envelope.png" alt="envelope" >
+				<img src="./images/email-wht.png" alt="envelope">
 				<p>Contact Us</p>
 			</div>
 		</div>
 		<div class="header-wrapper">
 			<a href="./index.html"><img src="./images/logo-white-vulcan.svg" alt="logo" class="header-logo"></a>
-			<button class="header-hamburger" onclick="toggleMenu()">
+			<!-- <button class="header-hamburger" onclick="toggleMenu()">
 				<div></div>
 				<div></div>
 				<div></div>
-			</button>
+			</button> -->
+			<div class="hamburger-menu" id="btn-menu">
+				<span class="hamburger-menu-content" tabindex="-1" onclick="openMenu()">
+					<span class="sr-only"></span>
+					<span class="bar" id="bar"></span>
+					<!-- <span class="bar" id="bar"></span>
+				  <span class="bar" id="bar"></span> -->
+				</span>
+				<!-- end hamburger-menu-content -->
+			</div>
+
 			<nav class="header-nav" id="navMenu">
-				<ul>
+				<ul class="nav-list">
 					<li><a href="#0">About</a></li>
 					<li><a href="#0">Products</a></li>
 					<li><a href="#0">Services</a></li>
@@ -56,9 +66,10 @@
 		<div class="header-banner">
 			<h1>We design and fabricate indestructable wastewater screens.</h1>
 			<h1>Enough said.</h1>
-			<button>View Products</button>
-			<button>View Services</button>
-
+			<div class="header-btns">
+				<button>View Products</button>
+				<button>View Services</button>
+			</div>
 			<div class="circles">
 				<div class="circle"></div>
 				<div class="circle"></div>
@@ -192,37 +203,38 @@
 			<button>About Us</button>
 		</section>
 		<div class="video">
-			<iframe class="video-iframe" src="https://player.vimeo.com/video/183929811" width="620" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+			<iframe class="video-iframe" src="https://player.vimeo.com/video/183929811" width="620" height="360"
+				frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 
 		</div>
 		<div class="form">
 			<div class="form-heading">
-				<p>Stay in the know. Sign up for our news letter.</p>	
+				<p>Stay in the know. Sign up for our news letter.</p>
 				<form action="post">
 					<input type="text" placeholder="Enter your email">
 					<button>Submit</button>
 				</form>
 			</div>
-			
+
 		</div>
 		<div class="contact">
 			<div class="contact-map">
 				<div class="contact-map-objects">
-				<h2>Installed in</h2>
-				<h2>a city near you</h2>
-				<form class="contact-map-button" action="" method="post">
-					<button >Find a vulcan install</button>
-				</form>
-			</div>
+					<h2>Installed in</h2>
+					<h2>a city near you</h2>
+					<form class="contact-map-button" action="" method="post">
+						<button>Find a vulcan install</button>
+					</form>
+				</div>
 			</div>
 			<div class="contact-question">
 				<h2>Ready to spec Vulcan</h2>
 				<h2>For your project?</h2>
 				<form class="contact-question-button" action="" method="post">
-					<button >Contact Us</button>
+					<button>Contact Us</button>
 				</form>
 			</div>
-			
+
 		</div>
 
 		<img src="./images/wave-blue-light.png" alt="blue wave" class="footer-wave">
@@ -234,23 +246,23 @@
 		</div>
 
 		<div class="footer-info_wrapper">
-	<div class="footer-top">
-	<div class="footer-left">
-		<img src="./images/icon-white-facebook.png" alt="facebook">
-		<img src="./images/icon-white-linkedin.png" alt="facebook">
-	</div>
+			<div class="footer-top">
+				<div class="footer-left">
+					<img src="./images/icon-white-facebook.png" alt="facebook">
+					<img src="./images/icon-white-linkedin.png" alt="facebook">
+				</div>
 
-	<div class="footer-right">
-		<img src="./images/phone-call.png" alt="phone" >
-		<p>+1 712-642-2755</p>
-		<img src="./images/envelope.png" alt="envelope" >
-		<p>Contact Us</p>
-	</div>
-	</div>
-	<div class="footer-bottom">
-		<p>Copyright 2017. All rights reserved</p>
-	</div>
-</div>
+				<div class="footer-right">
+					<img src="./images/phone-call-wht.png" alt="phone">
+					<p>+1 712-642-2755</p>
+					<img src="./images/email-wht.png" alt="envelope">
+					<p>Contact Us</p>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<p>Copyright 2017. All rights reserved</p>
+			</div>
+		</div>
 	</footer>
 
 	<!-- *** IMPORTANT *** If you do not require the jQuery Library then feel free to delete the next line -->
