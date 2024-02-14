@@ -245,7 +245,9 @@ $navbar-z-index: 10;
         &.active &-line:nth-child(3) {
             transform: rotate(-40deg) translate(0.2rem, -0.2rem);
         }
-
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
 }
         
     
