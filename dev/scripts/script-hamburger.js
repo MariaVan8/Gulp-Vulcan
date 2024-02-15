@@ -8,4 +8,13 @@ hamburger.addEventListener('click', function() {
     nav.classList.toggle('show');
 });
 
+const mql = window.matchMedia("(min-width: 560px)");
 
+mql.addListener(removeTransition);
+
+function removeTransition(e) {
+    if (e.matches) {
+        hamburger.classList.remove("active");
+        nav.classList.remove("show");
+    }
+}

@@ -173,8 +173,11 @@ $navbar-z-index: 10;
 
         &-wrapper {
             background-color: transparent;
-            display: block;
+            display: flex;
             text-align: center;
+            align-items: center;
+            justify-content: center;
+            
         }
 
         &-banner {
@@ -194,9 +197,13 @@ $navbar-z-index: 10;
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            margin: 0 auto;
-            width: 700px;
+            //margin: 0 auto;
+            // width: 700px;
             height: 70px;
+            width: 100%;
+            align-self: center;
+            margin-top: 6rem;
+         
 
             ul {
                 @include flex-row;
@@ -249,6 +256,8 @@ $navbar-z-index: 10;
             display: none;
         }
 }
+
+
         
     
 
