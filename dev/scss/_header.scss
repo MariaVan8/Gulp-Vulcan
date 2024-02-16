@@ -10,6 +10,7 @@ $navbar-z-index: 10;
     background-position: center;
     transition: opacity 1s ease-in-out;
     width: 100%;
+    @include flex-col;
     &-top {
         display: none;
     }
@@ -235,12 +236,14 @@ $navbar-z-index: 10;
     }
 
     @media screen and (min-width: 1024px) {
+        justify-content: center;
+        align-items: center;
         &-nav {
             height: 70px;
         
             ul{
-                width: 58%;
-                height: 5rem;
+                width: 65%;
+                height: 7rem;
                 display: flex;
                 align-items: center;
                 margin-top: 4rem;
@@ -251,9 +254,29 @@ $navbar-z-index: 10;
         }
         &-banner{
             h1{
-                font-size: 80px;
+                font-size: 5.5rem;
+            }
+            button{
+                height: 4rem;
             }
           
+        }
+        &-top {
+            font-size: 22px;
+            width: 80%;
+        }
+        &-text{
+            width: 60%;
+        }
+        &-btns{
+            height: 3rem;
+        }
+        .circles{
+            .circle{
+                width: 25px;
+                height: 25px;
+            
+            }
         }
     }
 
