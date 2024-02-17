@@ -144,18 +144,31 @@
     }
 
     @media screen and (min-width: 1024px){
+    
         &-logo{
-            width: 213px;
+            width: 260px;
+            &_wrapper{
+                width: 40%;
+            
+            }
         }
         &-right{
-            width: 80%;
+            width: 45%;
         }
         &-top{
             width: 100%; 
+            justify-content: end;
+        }
+        &-bottom{
+            width: 65%;
+            p{
+                width: 20rem;
+            }
         }
       p{
         font-size: 18px;
         font-weight: 400;
+      
       }
 
       &-info_wrapper {
