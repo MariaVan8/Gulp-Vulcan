@@ -75,7 +75,7 @@
 
         p {
             color: $white;
-            font-size: 20px;
+            font-size: 14px;
             font-weight: 100;
         }
         :nth-child(2){
@@ -105,7 +105,7 @@
 
         p {
             margin: 0;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 100;
         }
 
@@ -123,6 +123,7 @@
             @include flex-col;
             width: 70%;
             gap: 1rem;
+            align-items: center;
         }
 
         &-top{
@@ -136,7 +137,7 @@
         }
 
         &-right {
-            gap: 0.5rem;
+            // gap: 0.5rem;
 
         }
 
@@ -144,29 +145,40 @@
     }
 
     @media screen and (min-width: 1024px){
-    
+    padding-bottom: 0rem;
         &-logo{
-            width: 260px;
+            width: 200px;
+            height: 140px;
             &_wrapper{
-                width: 40%;
+                width: 30%;
+                justify-content: flex-start;
+                padding:0 0 2rem 4rem;
             
             }
         }
+        &-left{
+            img{
+                max-width: 100%;
+                height: auto;
+            }
+        }
         &-right{
-            width: 45%;
+            width: 72%;
         }
         &-top{
             width: 100%; 
-            justify-content: end;
+            justify-content: space-between;
+            gap: 0;
+            padding: 0;
         }
         &-bottom{
             width: 65%;
             p{
-                width: 20rem;
+                width: 15rem;
             }
         }
       p{
-        font-size: 18px;
+        font-size: 14px;
         font-weight: 400;
       
       }
@@ -174,6 +186,7 @@
       &-info_wrapper {
       @include flex-row;
       align-items: center;
+      width: 65%;
     }
 
 

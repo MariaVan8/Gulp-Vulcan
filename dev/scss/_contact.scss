@@ -87,6 +87,7 @@
     @media screen and (min-width: 768px) {
         flex-direction: row-reverse;
         height: 400px;
+        margin-bottom: 1.5rem;
 
        
         
@@ -139,4 +140,10 @@
 
 
     }
+
+    @media screen and (min-width: 1024px) {
+        margin-bottom: 2.3rem;
+    }
 }
+
+
