@@ -1,6 +1,7 @@
 @use "variables" as *;
 @use "mixins" as *;
 
+//Mobile Styling for Second Section
 .section {
     &-02 {
         @include flex-col;
@@ -49,6 +50,7 @@
         }
     }
 
+    //Tablet Styling for Second Section
     @media (min-width: 768px) {
         &-02 {
             @include flex-col;
@@ -78,6 +80,7 @@
         }
     }
 
+    //Desktop Styling for Second Section
     @media (min-width: 960px) {
         &-02 {
 
@@ -107,7 +110,5 @@
             }
         }
     }
-
-    @media (min-width: 1024px) {}
 
 }

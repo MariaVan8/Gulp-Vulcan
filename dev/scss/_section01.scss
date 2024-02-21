@@ -1,6 +1,7 @@
 @use "variables" as *;
 @use "mixins" as *;
 
+//Mobile Section 1 Styling
 .section {
     &-01 {
         @include flex-col;
@@ -76,7 +77,7 @@
         }
     }
 
-
+    //Tablet Styling for Section 1
     @media (min-width: 768px) {
         &-products {
             @include flex-row;
@@ -115,6 +116,7 @@
         }
     }
 
+    //Desktop Styling for Section 1
     @media (min-width: 960px) {
 
         &-01 {
@@ -178,6 +180,5 @@
         }
     }
 
-    @media (min-width: 1024px) {}
 
 }

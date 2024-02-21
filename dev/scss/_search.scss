@@ -1,6 +1,7 @@
 @use "variables" as *;
 @use "mixins" as *;
 
+//Mobile Styling for Form Search Section
 .search {
     @include flex-col;
     width: 100%;
@@ -100,6 +101,7 @@
         }
     }
 
+    //Tablet Styling for Form Search Section
     @media (min-width: 768px) {
         &-heading {
             @include flex-col;
@@ -182,6 +184,7 @@
         }
     }
 
+    // Desktop Styling for Form Search Section
     @media (min-width: 960px) {
 
         &-heading {
@@ -265,7 +268,5 @@
             }
         }
     }
-
-    @media (min-width: 1024px) {}
 
 }
