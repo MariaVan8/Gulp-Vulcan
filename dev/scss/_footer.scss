@@ -33,7 +33,7 @@
         @include flex-row;
         align-items: center;
         justify-content: center;
-        gap: 3rem;
+        gap: 2rem;
         width: 100%;
         padding: 1rem 1rem 0;
         position: relative;
@@ -75,7 +75,7 @@
 
         p {
             color: $white;
-            font-size: 20px;
+            font-size: 14px;
             font-weight: 100;
         }
         :nth-child(2){
@@ -88,6 +88,7 @@
         :nth-child(4){
             margin: 0 1rem 0 0.2rem;
            }
+         
 
     }
 
@@ -148,21 +149,46 @@
             width: 213px;
         }
         &-right{
-            width: 80%;
+            width: 62%;
+            :nth-child(2){
+                margin: 0;
+            }
+            :nth-child(4){
+                margin: 0;
+            }
         }
         &-top{
             width: 100%; 
+            justify-content: flex-end;
+            padding: 0;
+        }
+        &-bottom{
+            display: flex;
+            width: 62%;
+            p{
+                padding-right: 2rem;
+            }
         }
       p{
-        font-size: 18px;
+        font-size: 14px;
         font-weight: 400;
       }
 
       &-info_wrapper {
       @include flex-row;
+      gap: 10px;
       align-items: center;
     }
 
 
+    }
+
+    @media screen and (min-width: 1120px){
+        &-top{
+            width: 70%;
+        }
+        &-right{
+            width: 50%;
+        }
     }
 }
