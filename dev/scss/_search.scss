@@ -10,6 +10,7 @@
     background: $dark-blue;
     padding: 0;
 
+
     &-heading {
         @include flex-col;
         justify-content: center;
@@ -151,6 +152,8 @@
             }
         }
 
+
+
         &-items {
             @include flex-row;
             width: 100%;
@@ -187,12 +190,7 @@
     @media (min-width: 960px) {
 
 
-        // svg {
-        //     position: absolute;
-        //     left: 0;
-        //     top: 0;
-        //     width: 100%
-        // }
+
 
         &-heading {
             @include flex-col;
@@ -247,10 +245,11 @@
         &-items {
             @include flex-row;
             width: 100%;
+            flex-wrap: nowrap;
             margin: 0 auto;
             justify-content: center;
             align-items: center;
-            gap: 2vh;
+            gap: 1vh;
         }
 
         &-item {
