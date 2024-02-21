@@ -2,14 +2,14 @@
 @use "mixins" as *;
 
 
- .video {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    padding: 10%;
-    background-color: #468ECC;
+.video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 10%;
+  background-color: #468ECC;
 
 
   &-iframe {
@@ -17,8 +17,8 @@
     border: 20px solid #234058;
     width: 80%;
     height: calc(0.5806 * 62vw);
- 
+
   }
 
-  
+
 }
