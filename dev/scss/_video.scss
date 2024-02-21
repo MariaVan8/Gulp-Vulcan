@@ -1,7 +1,7 @@
 @use "variables" as *;
 @use "mixins" as *;
 
-//video 
+ 
  .video {
     display: flex;
     justify-content: center;
@@ -21,7 +21,7 @@
     height: calc(0.5806 * 62vw);
 
   }
-
+  // Media queries for tablets for the video
   @media screen and (min-width: 765px)
   {    
     padding: 50px 80px;
@@ -31,6 +31,7 @@
     }
   
   }
+  // Media queries for Desktop for the video
 
   @media screen and (min-width: 960px) {
     padding: 50px 120px;
