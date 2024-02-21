@@ -69,7 +69,6 @@
         margin: 0 auto;
         justify-content: center;
         align-items: center;
-        // gap: 1vh;
     }
 
     &-item {
@@ -152,8 +151,6 @@
             }
         }
 
-
-
         &-items {
             @include flex-row;
             width: 100%;
@@ -183,14 +180,9 @@
                 padding: 0 10px;
             }
         }
-
-
     }
 
     @media (min-width: 960px) {
-
-
-
 
         &-heading {
             @include flex-col;
@@ -275,6 +267,5 @@
     }
 
     @media (min-width: 1024px) {}
-
 
 }
