@@ -7,7 +7,7 @@
         justify-content: center;
         width: 100%;
         background: #fff;
-        margin: 0 auto;
+        margin: 5px auto;
         padding: 20px;
     }
 
@@ -79,7 +79,45 @@
         border-bottom: none;
     }
 
-    @media (min-width: 768px) {}
+    @media (min-width: 768px) {
+        &-products {
+            @include flex-row;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        &-product {
+            @include flex-col;
+            width: 20%;
+            margin: 0 1rem;
+            padding: 1rem;
+            // border: 1px solid #ccc;
+            // border-radius: 5px;
+            text-align: center;
+            border: none;
+
+            img {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            h4 {
+                @include flex-col;
+                font-size: 1.5rem;
+                margin: 0 auto;
+                color: $blue;
+            }
+
+            a {
+                @include flex-row;
+                font-size: 0.9rem;
+                margin: 0 auto;
+                padding: 10px;
+            }
+        }
+    }
 
     @media (min-width: 960px) {
 
