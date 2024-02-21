@@ -1,6 +1,7 @@
 @use "variables" as *;
 @use "mixins" as *;
 
+//Mobile Styling for Form Search Section
 .search {
     @include flex-col;
     width: 100%;
@@ -69,7 +70,6 @@
         margin: 0 auto;
         justify-content: center;
         align-items: center;
-        // gap: 1vh;
     }
 
     &-item {
@@ -101,6 +101,7 @@
         }
     }
 
+    //Tablet Styling for Form Search Section
     @media (min-width: 768px) {
         &-heading {
             @include flex-col;
@@ -152,8 +153,6 @@
             }
         }
 
-
-
         &-items {
             @include flex-row;
             width: 100%;
@@ -183,14 +182,10 @@
                 padding: 0 10px;
             }
         }
-
-
     }
 
+    // Desktop Styling for Form Search Section
     @media (min-width: 960px) {
-
-
-
 
         &-heading {
             @include flex-col;
@@ -273,8 +268,5 @@
             }
         }
     }
-
-    @media (min-width: 1024px) {}
-
 
 }
