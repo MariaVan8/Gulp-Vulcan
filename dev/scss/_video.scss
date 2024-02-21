@@ -1,24 +1,38 @@
 @use "variables" as *;
 @use "mixins" as *;
 
+//video 
+ .video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 12%;
+    background-color: $blue;
 
-.video {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  padding: 10%;
-  background-color: #468ECC;
-
-
+// Added calulation for height of iframe
+// this was so that the video scales with the window
+  
   &-iframe {
-    background-color: #01882a;
-    border: 20px solid #234058;
+    background-color: $green;
+    border: 15px solid $dark-blue;
     width: 80%;
     height: calc(0.5806 * 62vw);
 
   }
 
+  @media screen and (min-width: 765px)
+  {    
+    padding: 50px 80px;
 
-}
+    &-iframe {
+      border: 10px solid $dark-blue;
+    }
+  
+  }
+
+  @media screen and (min-width: 960px) {
+    padding: 50px 120px;
+  }
+ }

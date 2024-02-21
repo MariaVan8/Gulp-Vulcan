@@ -1,6 +1,8 @@
 @use "variables" as *;
 @use "mixins" as *;
 
+//mobile version of form
+//Where the input for email is
 .form {
   @include flex-col;
   justify-content: center;
@@ -11,20 +13,10 @@
   background-color: $light-blue;
 
   &-heading {
-    // background-color: $dark-blue;
-    // border: 10px solid $dark-blue;
     @include flex-col;
     justify-content: center;
     width: 100%;
 
-    // align-items: center;
-    // flex-direction: column
-
-    // height: 100%;
-    // padding: 3rem 7rem;
-    // position: absolute;
-    // top: 0;
-    // left: 0;
     input {
       width: 40%;
       height: 30px;
@@ -54,8 +46,8 @@
       text-align: center;
     }
   }
-
-  @media screen and (min-width: 768px) {
+//Media queary so the everything is centered on the page
+  @media screen and (min-width: 765px) {
     @include flex-row;
 
     &-heading {
@@ -70,4 +62,5 @@
       }
     }
   }
+
 }
