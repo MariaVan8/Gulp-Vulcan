@@ -8,13 +8,15 @@ $navbar-z-index: 10;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+
+     // Smooth transition effect for opacity changes
     transition: opacity 1s ease-in-out;
     width: 100%;
     @include flex-col;
+    // Hide the top part of the header by default (for mobile views)
     &-top {
         display: none;
     }
-
     &-wrapper {
         @include flex-row;
         padding: 1rem;
@@ -28,6 +30,8 @@ $navbar-z-index: 10;
     &-logo {
         width: 20%;
     }
+
+     // Navigation menu styling
     &-nav {
         position: absolute; /* Changed from fixed to absolute */
         top: 100%; /* Start off below the header-wrapper */
@@ -69,6 +73,7 @@ $navbar-z-index: 10;
         }
     }
 
+ // Banner section styling
     &-banner {
         text-transform: uppercase;
         color: $white;
@@ -101,10 +106,6 @@ $navbar-z-index: 10;
             height: 50px;
             line-height: 20px;
         }
-
-        // &> :nth-child(3) {
-        //     margin-top: 5rem;
-        // }
 
         &> :nth-child(4) {
             margin-bottom: 2rem;
@@ -280,33 +281,6 @@ $navbar-z-index: 10;
         }
     }
 
-}
-
-.hamburger{
-    height: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    gap: 0.1rem;
-    position: relative;
-    &-line{
-        background-color: $white;
-        height: 0.2rem;
-        width: 1.5rem;
-        transition: transform 0.3s ease;
-    }
-        &.active &-line:nth-child(2) {
-        display: none;
-        }
-        &.active &-line:nth-child(1) {
-            transform: rotate(40deg) translate(0.2rem, 0.2rem);
-        }
-        &.active &-line:nth-child(3) {
-            transform: rotate(-40deg) translate(0.2rem, -0.2rem);
-        }
-        @media screen and (min-width: 768px) {
-            display: none;
-        }
 }
 
 
