@@ -163,6 +163,8 @@
             padding: 0;
         }
         &-bottom{
+            display: flex;
+            width: 62%;
             p{
                 padding-right: 2rem;
             }
@@ -174,9 +176,19 @@
 
       &-info_wrapper {
       @include flex-row;
+      gap: 10px;
       align-items: center;
     }
 
 
+    }
+
+    @media screen and (min-width: 1120px){
+        &-top{
+            width: 70%;
+        }
+        &-right{
+            width: 50%;
+        }
     }
 }
